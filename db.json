@@ -1,0 +1,25 @@
+{
+    "dashboard": {
+        "ativo": true,
+        "onlineDesde": "20/10 13:20",
+        "requests": {
+            "tempoMinimo": 1,
+            "tempoMedio": 12,
+            "tempoMaximo": 123456,
+            "porCliente": [
+                {
+                    "descricao": "server01",
+                    "quantidade": 1234
+                },
+                {
+                    "descricao": "server02",
+                    "quantidade": 12345
+                },
+                {
+                    "descricao": "server03",
+                    "quantidade": 123456
+                }
+            ]
+        }
+    }
+}
