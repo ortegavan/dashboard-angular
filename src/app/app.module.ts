@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GoogleChartsModule } from 'angular-google-charts';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
@@ -13,7 +14,8 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule, 
+        GoogleChartsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

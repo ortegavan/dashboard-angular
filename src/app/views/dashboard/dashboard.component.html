@@ -1,5 +1,5 @@
 <div class="container">
-    <div *ngIf=dashboard.ativo class="legenda-verde"> 
+    <div *ngIf=dashboard.ativo class="legenda-verde">
         <p>Serviço ativo</p>
         <p>
             <img src="/assets/servico-ativo.png" alt="Serviço ativo" class="status-servico">
@@ -13,17 +13,20 @@
     </div>
     <div>
         <p>
-            <span class="legenda legenda-verde"></span>Requests ok
+            Requests
+            <!-- <span class="legenda legenda-verde"></span>Requests ok
             <span class="legenda legenda-amarela"></span>Requests lentos
-            <span class="legenda legenda-vermelha"></span>Requests com erro
+            <span class="legenda legenda-vermelha"></span>Requests com erro -->
         </p>
         <p>
-            <img src="/assets/grafico.png" alt="Gráfico" class="grafico">
+            <google-chart #chart [title]="title" [type]="type" [data]="data" [columns]="columns" [options]="options"
+                [width]="width" [height]="height">
+            </google-chart>
         </p>
     </div>
     <div>
-        <p>Hora atual</p>
-        <p class="numero">{{ data | date:'H:mm' }} </p>
+        <p>Hora da consulta</p>
+        <p class="numero">{{ agora | date:'H:mm' }} </p>
         <p>serviço online desde</p>
         <p class="numero verde">{{ dashboard.onlineDesde }}</p>
     </div>
